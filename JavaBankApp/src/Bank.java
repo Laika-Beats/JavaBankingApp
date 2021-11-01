@@ -7,7 +7,7 @@ public class Bank {
 		Account account = new Account("Joshua Thompson", "ID0001");
 		
 		System.out.println(account.customerID);
-
+		account.showMenu();
 	}
 
 }
