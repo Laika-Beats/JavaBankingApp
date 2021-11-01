@@ -70,7 +70,65 @@ public class Account {
 		
 		do {
 			System.out.println();
-		}
+			System.out.println("Enter an option: ");
+			// If user types more than 1 letter than only the first character will be chosen
+			char option1 = scanner.next().charAt(0);
+			// Converts response to upper case
+			option = Character.toUpperCase(option1);
+			System.out.println();
+			
+			switch(option) {
+			// Case 'A' checks user's account balance
+			case 'A':
+				System.out.println("==================================");
+				System.out.println("Balance = $" + balance);
+				System.out.println("==================================");
+				System.out.println();
+				break;
+				
+			// Case 'B' allows user to deposit money in to account
+			case 'B':
+				System.out.println("Enter an amount to depost: ");
+				int amount = scanner.nextInt();
+				deposit(amount);
+				System.out.println();
+				break;
+				
+			// Case 'C' allows user to withdraw money from their account
+			case 'C':
+				System.out.println("Enter an amount to withdraw: ");
+				int amount2 = scanner.nextInt();
+				withdraw(amount2);
+				System.out.println();
+				break;
+			
+			
+			// Case 'D' allows the user to view their most recent transaction while using this app
+			case 'D':
+				System.out.println("==================================");
+				getPreviousTransaction();
+				System.out.println("==================================");
+				System.out.println();
+				break;
+				
+			// Case 'E' calculates the accrued interest on the user's account after a number of years
+			case 'E': 
+				System.out.println("Enter how many years of accrued interest: ");
+				int years = scanner.nextInt();
+				calculateInterest(years);
+				break;
+			
+			// Case 'F' exists the user from their account
+			case 'F':
+				System.out.println("==================================");
+				break;
+				
+			// The default let's the user know they entered an invalid character
+			default:
+				System.out.println("Error: invalid option. Please enter A, B, C, D, E, or F");
+				break;
+			}
+		} while (option != 'F');
+		System.out.println("Thank you for banking with us!");
 	}
-
 }
