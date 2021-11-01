@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Account {
 	
@@ -49,6 +50,27 @@ public class Account {
 		double newBalance = (balance * interestRate * years) + balance;
 		System.out.println("The current interest rate is " + (100 * interestRate) + "%");
 		System.out.println("After " + years + " years your balance will be: " + newBalance);
+	}
+	
+	// Function showing main menu
+	void showMenu() {
+		char option = '\0';
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Welcome, " + customerName + "!");
+		System.out.println("Your ID is " + customerName + ".");
+		System.out.println();
+		System.out.println("What would you like to do?");
+		System.out.println();
+		System.out.println("A. Check your balance");
+		System.out.println("B. Make a deposit");
+		System.out.println("C. Make a withdrawl");
+		System.out.println("D. View previous transaction");
+		System.out.println("E. Calculate interest");
+		System.out.println("F. Exit");
+		
+		do {
+			System.out.println();
+		}
 	}
 
 }
