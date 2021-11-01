@@ -8,9 +8,9 @@ public class Account {
 	String customerID;
 	
 	// Class Constructor
-	Account(String customerName, String customerID){
-		customerName = this.customerName;
-		customerID = this.customerID;
+	Account(String cName, String cID){
+		customerName = cName;
+		customerID = cID;
 	}
 	
 	// Function for depositing money
