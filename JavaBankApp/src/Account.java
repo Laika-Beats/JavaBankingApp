@@ -12,5 +12,21 @@ public class Account {
 		customerName = this.customerName;
 		customerID = this.customerID;
 	}
+	
+	// Function for depositing money
+	void deposit(int amount) {
+		if (amount != 0) {
+			balance = balance + amount;
+			previousTransaction = previousTransaction + amount;
+		}
+	}
+	
+	// Function for withdrawing money
+	void withdraw(int amount) {
+		if (amount != 0) {
+			balance = balance - amount;
+			previousTransaction = -amount;
+		}
+	}
 
 }
