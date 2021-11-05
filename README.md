@@ -1,4 +1,4 @@
-# Employee Tracker System (Version 1.0)
+# Bank Account User System (Version 1.0)
 
 A command-line banking application that allows user to depost, withdraw, and calculate interest.
  *********************
